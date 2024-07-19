@@ -293,3 +293,17 @@ overflow: auto;
  right: 5px;
  padding-top: 5px;
 }
+
+.nochat{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.welcome p{
+  text-align: center;
+}
+.chat-icon{
+  font-size: 50px;
+}
