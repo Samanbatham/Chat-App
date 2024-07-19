@@ -1,9 +1,12 @@
-import React from 'react'
+import Sidebar from "../../components/sidebar/sidebar.jsx"
+import MessageContainer from "../../components/message/MessageContainer.jsx";
 
-function Home() {
-  return (
-    <div>Home</div>
+const Home = ()=>{
+  return(
+    <div className="app-container">
+      <Sidebar />
+      <MessageContainer />
+    </div>
   )
 }
-
-export default Home
+export default Home;

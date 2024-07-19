@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/Bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/Bg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -51,10 +51,8 @@ body {
 
 form {
   display: flex;
-
   align-items: center;
   justify-content: center;
-  padding: 10px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -73,11 +71,9 @@ input {
   font-size: 15px;
   border: none;
   border-radius: 5px;
-  padding-left: 10px;
   width: 100%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
+  padding: 5px;
+  
   box-sizing: border-box;
   background-color: rgb(34, 34, 34);
   color: white;
@@ -108,8 +104,6 @@ button {
   padding: 10px;
   border: none;
   border-radius: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: rgb(70, 41, 105);
   color: white;
 }
@@ -128,27 +122,6 @@ a{
   color: rgb(206, 243, 227);
   
 }
-
-/* @media (max-width: 600px) {
-  .signup-container {
-    width: 90%;
-    padding: 20px;
-  }
-
-  label {
-    font-size: 16px;
-  }
-
-  input {
-    font-size: 14px;
-  }
-
-  button {
-    font-size: 18px;
-    padding: 10px;
-  }
-} */
-
 .gender{
   display: flex;
   justify-content: space-around;
@@ -169,4 +142,154 @@ a{
 }
 .formcontrol label input{
   margin: 10px;
+}
+.app-container{
+  height: 400px;
+  width: auto;
+  max-width: 900px;
+  color: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  
+}
+.SearchInput-container{
+  height: auto;
+  width: 500px;
+  max-width: 400px;
+  color: rgb(255, 255, 255);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.SearchInput-container input{
+flex: 1;
+margin: 0px;
+padding-bottom: 10px;
+}
+.SearchInput-container button{
+  padding: 0px;
+  border-radius: 50px;
+  height: 50px;
+  width: 60px;
+  margin: 0px;
+  background-color: rgb(67, 124, 199);
+}
+.conversation{
+  display: flex;
+  padding : 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+
+}
+.conversation:hover{
+  background-color: rgb(86, 110, 110);
+}
+.conversation img{
+  width: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+.conversation p{
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.username p{
+  padding-left: 30px;
+}
+.search-btn{
+  padding: 5px;
+  margin: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
+background-color: rgb(43, 78, 78);
+}
+.search-btn:hover{
+  background-color: black;
+  
+}
+ 
+.divider{
+  background-color: antiquewhite;
+  height: 1px;
+}
+
+.logout-btn{
+color: red;  
+}
+.logout-btn button{
+  padding-right: 10px;
+  background:none;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 15px;
+}
+.sidebar{
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.message-container{
+width: 300px;
+border: 1px solid white;
+overflow: auto;
+}
+.header{
+  background-color: rgb(36, 25, 25);
+  padding:10px;
+  border: 1px solid white;
+  margin-bottom: 10px;
+  position: sticky;
+  top: 0px;
+}
+.message{
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+}
+.message .profile img{
+  width: 30px;
+}
+.message p{
+  padding-left: 10px;
+  background-color: rgb(54, 68, 68);
+  padding-right: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 5px;
+  margin-bottom: 0px;
+}
+.time{
+  font-size: 7px;
+  margin-left: 60px;
+}
+.chat{
+  padding-bottom: 1px;
+  margin: 0px;
+}
+.messageInput{
+  position: sticky;
+  bottom: 0px;
+}
+.keyboard{
+  display: flex;
+  position: relative;
+  width: 100%;
+  padding-bottom: 0px;
+}
+.keyboard button{
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  background: none;
+ right: 5px;
+ padding-top: 5px;
 }
