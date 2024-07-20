@@ -1,17 +1,22 @@
 import Messages from "./Messages.jsx";
 import MessageInput from "./MessageInput.jsx";
 import { HiOutlineChatAlt2 } from "react-icons/hi";
+import useConversation from "../../zustand/useConversation.js";
+import { useEffect } from "react";
 
 const MessageContainer = () => {
-  const  noChatSelected = true;
+  const {selectedConversation , setSelectedConversation} = useConversation();
+
+  useEffect(()=>{
+    return()=> setSelectedConversation(null)},[setSelectedConversation])
   return (
     <div className="message-container">
-     {noChatSelected ?  <NoChatSelected /> :
+     {!selectedConversation ?  <NoChatSelected /> :
      
       (
         <>
       <div className="header">
-        <span>To:</span> <span> Saman</span>
+        <span>To:</span><span>{selectedConversation.fullName}</span>
       </div>
 
       <Messages />

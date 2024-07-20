@@ -1,22 +1,31 @@
-import React from 'react'
+import React from "react";
+import { useAuthContext } from "../../context/AuthContext.jsx";
+import useConversation from "../../zustand/useConversation";
+import { extractTime } from "../../utils/extractTime.js";
 
-const Message = () => {
+const Message = ({ message }) => {
+  const { authUser } = useAuthContext();
+  const { selectedConversation } = useConversation();
+  const fromMe = message.senderId === authUser._id;
+  const formattedTime = extractTime(message.createdAt)
+  const chatClassName = fromMe ? "chat_end" : "chat-start";
+  const profilePic = fromMe
+    ? authUser.profilePic
+    : selectedConversation.profilePic;
+  const bgColor = fromMe ? "blue" : "grey";
   return (
-    <div>
-    <div className='message'>
-        <div className="profile">
-    <img src="/Avtar.png" alt="" />
-        </div>
-        <div className="chat">
-        <p>Hi All</p>
-        </div>
+    <div className={chatClassName}>
+      <div className="profile">
+        <img src={profilePic} alt="" />
+      </div>
+      <div className={bgColor}>
+        <p>{message.message}</p>
+        <div className="time">{formattedTime}</div>
+      </div>
+
       
     </div>
-    <div className='time'>
-        <p>12:35</p>
-    </div>
-    </div>
-  )
-}
+  );
+};
 
-export default Message
+export default Message;

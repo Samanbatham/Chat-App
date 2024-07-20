@@ -3,7 +3,6 @@
   padding: 0px;
   font-family: "Poppins", sans-serif;
 }
-
 body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/Bg2.jpg");
   background-repeat: no-repeat;
@@ -15,7 +14,6 @@ body {
   justify-content: center;
   height: 100vh;
 }
-
 .container {
   height: auto;
   width: 800px;
@@ -27,8 +25,6 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
-
-
 .signup-container {
   height: auto;
   width: 800px;
@@ -40,7 +36,6 @@ body {
   padding: 20px;
   box-sizing: border-box;
 }
-
 .head {
   display: flex;
   align-items: center;
@@ -48,7 +43,12 @@ body {
   color: bisque;
   padding: 20px;
 }
-
+.user-form{
+  display: block;
+}
+.user-form form{
+  display: block;
+}
 form {
   display: flex;
   align-items: center;
@@ -56,7 +56,6 @@ form {
   width: 100%;
   box-sizing: border-box;
 }
-
 label {
   font-size: 20px;
   padding: 5px;
@@ -66,7 +65,6 @@ label {
   max-width: 120px;
   box-sizing: border-box;
 }
-
 input {
   font-size: 15px;
   border: none;
@@ -78,26 +76,20 @@ input {
   background-color: rgb(34, 34, 34);
   color: white;
 }
-
 input[type="radio"] {
   width: auto;
 }
-
 .radio-container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-
-
-
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 button {
   font-size: 20px;
   margin: 20px;
@@ -111,22 +103,18 @@ button:hover{
   cursor: pointer;
   background-color: #211531;
 }
-
 .link{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 a{
-  color: rgb(206, 243, 227);
-  
+  color: rgb(206, 243, 227); 
 }
 .gender{
   display: flex;
   justify-content: space-around;
   align-items: center;
-
 }
 .gendertext{
   font-size: 10px;
@@ -134,7 +122,6 @@ a{
 }
 .formcontrol{
   display: flex;
-  
 }
 .formcontrol label{
   display: flex;
@@ -152,8 +139,7 @@ a{
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 10px;
   box-sizing: border-box;
-  display: flex;
-  
+  display: flex; 
 }
 .SearchInput-container{
   height: auto;
@@ -166,8 +152,6 @@ a{
   padding: 20px;
   box-sizing: border-box;
 }
-
-
 .SearchInput-container input{
 flex: 1;
 margin: 0px;
@@ -186,7 +170,7 @@ padding-bottom: 10px;
   padding : 5px;
   border: 1px solid white;
   border-radius: 5px;
-
+  overflow: auto;
 }
 .conversation:hover{
   background-color: rgb(86, 110, 110);
@@ -200,7 +184,6 @@ padding-bottom: 10px;
   padding-left: 10px;
   font-size: 20px;
 }
-
 .username p{
   padding-left: 30px;
 }
@@ -214,9 +197,7 @@ background-color: rgb(43, 78, 78);
 }
 .search-btn:hover{
   background-color: black;
-  
 }
- 
 .divider{
   background-color: antiquewhite;
   height: 1px;
@@ -233,9 +214,13 @@ color: red;
   padding: 0px;
   padding-top: 15px;
 }
+.logout-btn button:hover{
+  color: red;
+}
 .sidebar{
   padding-right: 20px;
   padding-left: 20px;
+  overflow: auto;
 }
 .message-container{
 width: 300px;
@@ -250,38 +235,64 @@ overflow: auto;
   position: sticky;
   top: 0px;
 }
-.message{
+.chat_end{
   display: flex;
   align-items: center;
-  margin-bottom: 0px;
+  justify-content: right;
+  flex-direction: row-reverse;
+  margin-right: 4px;
 }
-.message .profile img{
+.chat_end .profile img{
   width: 30px;
 }
-.message p{
+.chat_end p{
   padding-left: 10px;
   background-color: rgb(54, 68, 68);
   padding-right: 10px;
   border: 1px solid grey;
   border-radius: 10px;
   margin: 5px;
-  margin-bottom: 0px;
 }
-.time{
-  font-size: 7px;
-  margin-left: 60px;
+.chat-start{
+  display: flex;
+  align-items: center;
+  margin-left: 4px;
+}
+.chat-start .profile img{
+  width: 30px;
+}
+.chat-start p{
+  padding-left: 10px;
+  background-color: rgb(146, 46, 46);
+  padding-right: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin: 5px;
+}
+.grey .time{
+  font-size: 8px;
+  margin-left: 15px;
+}
+.time p{
+  background: none;
+  border: none;
+}
+.blue .time{
+  display: flex;
+  justify-content: right;
+  font-size: 8px;
+  margin-right: 15px;
 }
 .chat{
   padding-bottom: 1px;
   margin: 0px;
 }
 .messageInput{
-  position: sticky;
-  bottom: 0px;
+  position: absolute;
+  width: 51.2%;
+  top: 364px;
 }
 .keyboard{
-  display: flex;
-  position: relative;
   width: 100%;
   padding-bottom: 0px;
 }
@@ -293,17 +304,30 @@ overflow: auto;
  right: 5px;
  padding-top: 5px;
 }
-
 .nochat{
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
 }
-
 .welcome p{
   text-align: center;
 }
 .chat-icon{
   font-size: 50px;
+}
+.selected{
+  display: flex;
+  padding : 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgb(42, 59, 94);
+}
+.selected img{
+  width: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+.selected p{
+  font-size: 25px;
 }

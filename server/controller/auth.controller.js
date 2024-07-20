@@ -1,6 +1,5 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 import generateTokenAndSetCookie from "../utils/generateToken.js";
 
 export const Login = async (req, res) => {
@@ -9,7 +8,7 @@ export const Login = async (req, res) => {
 
     const user = await User.findOne({ username });
     const isPasswordCorrect = await bcrypt.compare(password, user.password);
-    if (!user || !password) {
+    if (!user || !isPasswordCorrect) {
       return res.status(400).json({ error: "Invalid username or password!!" });
     }
 

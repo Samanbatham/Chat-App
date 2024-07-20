@@ -1,13 +1,12 @@
+import useGetConversation from "../../hooks/useGetConversation.js"
 import Conversation from "./Conversation.jsx"
 const Conversations = () => {
+  const {loading,conversations} = useGetConversation();
   return (
     <div className="conversations">
-      <Conversation />
-      <Conversation />
-      <Conversation />
-      <Conversation />
-      <Conversation />
-      <Conversation />
+      {conversations.map((conversation)=>(
+        <Conversation  key={conversation._id} conversation={conversation}  />
+))}
     </div>
   )
 }
