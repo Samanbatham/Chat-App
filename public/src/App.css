@@ -292,9 +292,7 @@ overflow: auto;
   display: flex;
   width: 90%;
 }
-.keyboard input{
 
-}
 .keyboard button{
  padding: 0px;
  margin: 0px;
@@ -328,7 +326,4 @@ overflow: auto;
 }
 .selected p{
   font-size: 25px;
-}
-.rahulgandhi{
-  
 }

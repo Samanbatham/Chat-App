@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "server": "nodemon server/index.js",
-     "start": "node server/index.js",
-    "build": "npm install && npm install --prefix public && npm run build --prefix public"
+    "start": "node server/index.js",
+    "build": "npm install && npm run build --prefix public"
 
   },
   "keywords": [],
