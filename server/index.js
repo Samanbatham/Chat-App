@@ -7,14 +7,13 @@ import messageRoutes from "./routes/message.routes.js"
 import userRoutes from "./routes/user.routes.js"
 import connectToMongoDB from './db/connectToMongoDB.js';
 import { app, server } from './socket/socket.js'
-import { fileURLToPath } from 'url';
 
 dotenv.config();
 
 //Port
 const Port = process.env.PORT || 5000;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+
+const __dirname = path.resolve();
 
 //App
 
