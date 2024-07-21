@@ -4,7 +4,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/Bg2.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../references/Bg2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
