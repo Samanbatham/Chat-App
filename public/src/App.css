@@ -287,22 +287,20 @@ overflow: auto;
   padding-bottom: 1px;
   margin: 0px;
 }
-.messageInput{
-  position: absolute;
-  width: 51.2%;
-  top: 364px;
-}
 .keyboard{
-  width: 100%;
-  padding-bottom: 0px;
+  position: relative;
+  display: flex;
+  width: 90%;
+}
+.keyboard input{
+
 }
 .keyboard button{
-  margin: 0px;
-  padding: 0px;
-  position: absolute;
-  background: none;
- right: 5px;
+ padding: 0px;
+ margin: 0px;
+ background: none;
  padding-top: 5px;
+ 
 }
 .nochat{
   display: flex;
@@ -330,4 +328,7 @@ overflow: auto;
 }
 .selected p{
   font-size: 25px;
+}
+.rahulgandhi{
+  
 }

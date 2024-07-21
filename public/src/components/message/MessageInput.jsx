@@ -13,21 +13,18 @@ const MessageInput = () => {
   }
 
   return (
-    <div className="messageInput">
     <form onSubmit={handleSubmit}>
-    
      <div className="keyboard">
-        <input type="text" placeholder="Send Ur Message" 
+        <input type="text" placeholder="Send a Message" 
         value={message}
         onChange={(e)=>setMessage(e.target.value)}
         />
-        <button type="submit">
+        <button className="sendbutton" type="submit">
         <IoMdSend />
         </button>
      </div>
-    
     </form>
-    </div>
+    
   )
 }
 

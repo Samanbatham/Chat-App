@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import useConversation from "../zustand/useConversation"
 import toast from "react-hot-toast";
+
 const useGetMessage = () => {
  const [loading,setLoading]  = useState(false)
  const{messages,setMessages,selectedConversation} = useConversation()
@@ -31,6 +32,7 @@ const useGetMessage = () => {
 };
 },[selectedConversation?._id , setMessages]);
 return {messages,loading};
+
 
 };
 
